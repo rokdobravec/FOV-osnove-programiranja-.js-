@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <title>Moja stran</title>
+    </head>
+    <body>  <!--to je HTML komentar-->
+    <h1>Moja prva spletna stran</h1>
+        <h2>predavanje 1</h2>
+        <p id="izpis"></p>
+        <script>
+        var i = 5;
+        var j = 3;
+        var vsota = i + j;
+        console.log (vsota);
+        //console.log
+        //window.alert(vsota);
+        b = "3";
+        var vsota = i + b;
+        /*
+        var vsota2 = 0;
+        vsota2 += b; //kratko
+        vsota2 = vsota2 + b; //dolgo
+        */ //več-vrstični komentar
+        document.write(vsota);
+        var tekst = "";
+        var ime = "Rok";
+        var priimek = "Dobravec";
+        tekst = "Podatki o študentu so: " + ime + " " + priimek;
+        document.getElementById("izpis").innerHTML = tekst;
+        var besedilo = "abc";
+        var z = true;
+        tekst += "<br> Dolžina besedila je: " + besedilo.length;
+        tekst += "<br> Tip spremenljivke z je: " + typeof(z);
+        document.getElementById("izpis").innerHTML = tekst;
+        
+        </script>
+    </body>
+</html>

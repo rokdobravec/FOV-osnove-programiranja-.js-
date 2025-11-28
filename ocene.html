@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <title>Moja stran</title>
+    </head>
+    <body>
+    <h1>Moja prva spletna stran</h1>
+    <p><button type="button" onclick="mojaFunkcija()">Izpis podatkov</button></p>
+        <p id="izpis"></p>
+        <script>
+            var ocene = [
+                {ime:"Rok", priimek:"Dobravec", ocena1: 60, ocene2: 80},
+                {ime:"Blaz", priimek:"Kovač", ocena1: 40, ocene2: 0},
+                {ime:"Ema", priimek:"Grm", ocena1: 60, ocene2: 41},
+                {ime:"Lovro", priimek:"Črne", ocena1: 100, ocene2: 100},
+                {ime:"Nejc", priimek:"Novak", ocena1: 90, ocene2: 20},
+                {ime:"Jakob", priimek:"Bracun", ocena1: 25, ocene2: 45},
+                {ime:"Rok", priimek:"Blaz", ocena1: 87, ocene2: 36},
+                {ime:"Klara", priimek:"Kenda", ocena1: 90, ocene2: 80},
+                {ime:"Tija", priimek:"Fajfar", ocena1: 40, ocene2: 60},
+                {ime:"Manca", priimek:"Pobegun", ocena1: 80, ocene2: 30},
+                {ime:"Gloria", priimek:"Kavs", ocena1: 0, ocene2: 0}]
+
+            function mojaFunkcija() {
+                var tekst = "";
+                for(var i = 0; i < ocene.length; i++){
+                    tekst += ocene[i].priimek + " " + ocene[i].ime + " " + ocene[i].ocena1 + " " + ocene[i].ocene2 + "<br>";       
+                }
+                document.getElementById("izpis").innerHTML = tekst;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>MOJA STRAN</title>
+        <!-- <link rel="stylesheet" href="main.css"> -->
+    </head>
+    <body>
+        
+        <h1>Moja prva spletna stran</h1>
+        <h2>Moj drugi naslov</h2>
+        <p id="primer"></p>
+        <script>
+  
+           
+        var avti= ["Saab", "Volvo", "BMW"];   
+        //document.getElementById("primer").innerHTML= avti [1]; //izpišemo vrednosti iz drugega polja   
+        //document.getElementById("primer").innerHTML= avti [0]; //izpišemo vrednost iz prvega polja
+        //document.write (avti  [0]); 
+        //document.getElementById("primer").innerHTML= avti ; //izpiše vse 3 pa še vejico da umes
+        //document.write(avti.length);
+                
+        /*avti.push("Honda"); // dodajamo novo celico z imenom Honda
+        avti[3]= "Audi"; // zamenjamo Saab za Audi.
+        document.write (avti);
+        */
+        
+        
+        var text="";
+        var i;
+        for (i = 0; i < avti.length; i++) {text += avti[i] + "<br>"; }
+        document.getElementById("primer").innerHTML= text;
+        
+        </script>
+             
+      
+        
+        
+       
+    </body>
+</html>

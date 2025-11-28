@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <title>Moja stran</title>
+    </head>
+    <body>
+        <h1>Moja prva spletna stran</h1>
+        <p>Prijava</p>
+        <p>username: <input id="username" type="text"> </p>
+        <p>password: <input id="password" type="password"> </p>
+        <p><button type="button" onclick="mojaFunkcija()">Prijava</button></p>
+        <p id="izpis"></p>
+        <p id="stPoiskusov">To je poiskus: </p>
+        
+
+
+        <script>
+            var st_p = 1;
+            function mojaFunkcija() {
+                
+                document.getElementById("stPoiskusov").innerHTML = st_p;
+                
+                
+
+                var v_user1;
+                var v_pass1;
+                var izpis = "";
+                v_user1 = document.getElementById("username").value;
+                v_pass1 = document.getElementById("password").value;
+
+                username1 = "rok";
+                password1 = 666;
+
+
+                if(v_user1.toLocaleLowerCase() == username1.toLocaleLowerCase() && v_pass1 == password1){
+                    izpis += "Uspešno prijavljen";
+                    location = "predloga.html"
+
+                }else if(v_user1.toLocaleLowerCase() == username1.toLocaleLowerCase() && v_pass1 != password1){
+                    izpis += "Napačno geslo";
+                    document.getElementById("password").value = "";
+                    document.getElementById("password").focus();
+                    if(st_p > 3){
+                    alert("Preveč poskusov, poskusi čez 30sec");
+                    return;
+                    }
+                    st_p++;
+
+                }else{
+                    izpis += "Uporabnik ne obstaja";
+                    document.getElementById("username").value = "";
+                    document.getElementById("password").value = "";
+                    document.getElementById("username").focus();
+                    if(st_p >= 3){
+                        alert("Preveč poskusov, poskusi čez 30sec");
+                        
+                        //v_user1.disabled = true;
+                        //v_pass1.disabled = true;
+                    return;
+                    }
+                    st_p++;
+                }
+                
+                document.getElementById("izpis").innerHTML = izpis; 
+            }
+        </script>
+    </body>
+</html>
